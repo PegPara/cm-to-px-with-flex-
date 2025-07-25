@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<!--link for pyscript library-->
+	<link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    
+    <!--link for CSS file-->
+    <link rel="stylesheet" href="cm to px_flex.css">
+    
+    <!--link font-->
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap" rel="stylesheet">
+    
+	<title>PX TO CM</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.38" />
+</head>
+
+<body>
+	<div id="page">
+<h1>CM TO PX</h1>
+<h4>Select your choise:</h4>	
+<hr>
+<form>
+<div class="row-flex">
+<div class="ty">
+	<label for="myinput1">
+<input id="myinput1" type="radio" name="type" value="1" checked />1.CM to PX</label>
+<br>
+	<label for="myinput2">
+<input id="myinput2" type="radio" name="type" value="2" />2.PX to CM</label>
+</div>
+	
+<div class="dpi-flex">
+<p id="dpi">Choose the DPI:
+<a id="link" href="#dpi*">*</a>
+</p>	
+	
+<select id="DPI">
+  <option value="96">96 DPI – Standard monitor / Windows default</option>
+  <option value="72">72 DPI – macOS logical DPI (legacy)</option>
+  <option value="120">120 DPI – Entry-level high-DPI display</option>
+  <option value="150">150 DPI – Draft quality printing (text)</option>
+  <option value="160">160 DPI – Android baseline DPI</option>
+  <option value="200">200 DPI – Medium quality print / digital</option>
+  <option value="220">220 DPI – Apple Retina (MacBook, iPhone XR)</option>
+  <option value="264">264 DPI – iPad Pro</option>
+  <option value="300">300 DPI – Standard photo/document print</option>
+  <option value="326">326 DPI – iPhone Retina / iPhone SE</option>
+  <option value="393">393 DPI – Samsung Galaxy S23+</option>
+  <option value="416">416 DPI – Google Pixel 7</option>
+  <option value="600">600 DPI – High-quality printing</option>
+  <option value="1200">1200 DPI – Magazine / publishing</option>
+  <option value="2400">2400 DPI – Archival, art scans</option>
+</select>
+</div>
+</div>
+
+<p id="textnum">Type your number:<input id="num" type="number" min="0.0" max="1000000.0" step="0.01" /></p>
+
+<div class="wrap">
+<button id="enter" type="button" py-click="enter">Enter</button>
+<h4 id="textr">Result:</h4>
+<div id="box">
+	<p><output id="result"></output></p>
+</div>
+<button id="clear" type="button" py-click="clear">Refresh</button>
+</div>
+</form>
+
+<hr>
+
+<a name="dpi*"></a>
+<h2>NOTES:</h2>
+<h3>What is DPI?</h3>
+<p id="info">DPI stands for Dots Per Inch.
+It measures the resolution or density of printed dots or pixels on a display or printer.</p>
+<p id="info">The higher the DPI, the more dots per inch, resulting in better detail and sharper images.</p>
+<p id="info">The lower the DPI, the fewer dots, which means less detail but smaller file sizes or faster printing.</p>
+<br><br>
+<table>
+<tr>
+<th colspan="2">Detailed DPI List with Typical Uses</th>
+</tr>
+<tr>
+	<th>DPI</th>
+	<th>Description / Typical Use Case</th>
+</tr>
+<tr><td>72</td><td>Classic low-res for older Apple/macOS screens</td></tr>
+  <tr><td>96</td><td>Default for Windows / standard monitors</td></tr>
+  <tr><td>120</td><td>Early high-DPI screens and accessibility scaling</td></tr>
+  <tr><td>150</td><td>Draft quality printing, mostly text documents</td></tr>
+  <tr><td>160</td><td>Android baseline for screen density buckets</td></tr>
+  <tr><td>200</td><td>Moderate print quality or web graphics</td></tr>
+  <tr><td>220</td><td>Apple Retina Display (MacBook, iPhone XR)</td></tr>
+  <tr><td>264</td><td>High-res iPad Pro display</td></tr>
+  <tr><td>300</td><td>Standard for photos, brochures, printing</td></tr>
+  <tr><td>326</td><td>iPhone Retina and iPhone SE display</td></tr>
+  <tr><td>393</td><td>Samsung Galaxy S23+ screen DPI</td></tr>
+  <tr><td>416</td><td>Google Pixel 7 screen DPI</td></tr>
+  <tr><td>600</td><td>High-quality image or photo printing</td></tr>
+  <tr><td>1200</td><td>Publishing, magazines, marketing material</td></tr>
+  <tr><td>2400</td><td>Archival scanning, artwork digitization</td></tr>
+</table>
+<br><br>
+<h3>How to Choose DPI?</h3>
+<ul type="disc">
+<li id="i1">Screens: Usually 96 dpi, sometimes 72 dpi on older or Apple devices.</li>
+<li id="i2">Text Printing: Around 150–300 dpi for clear, readable documents.</li>
+<li id="i3">Photo Printing: Usually 300–600 dpi for sharp images.</li>
+<li id="i4">Archival Scanning or Art: 1200 dpi or more for finest detail.</li>
+</ul>
+
+<py-script src="cm to px(final).py"></py-script>
+</div>
+
+</body>
+</html>
