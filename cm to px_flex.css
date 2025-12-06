@@ -205,19 +205,51 @@ color:tomato;
 color:green;
 }
 
- @media (max-width: 600px) {
-  body { padding: 20px; }
-  #page { padding: 15px; border-width: 8px; }
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  #page {
+    padding: 15px;
+    border-width: 8px;
+  }
+
   h1 { font-size: 32px; }
   h4, h2, h3 { font-size: 20px; }
+
+  /* Stack number input and label */
   #textnum {
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
   }
-  #num { width: 80%; margin-top: 10px; }
+
+  #num {
+    width: 80%;
+    margin-top: 10px;
+  }
+
+  /* Stack buttons vertically instead of using margins */
   .main-section {
-    flex-direction: column; /* stack buttons vertically on small screens */
+    flex-direction: column;
     align-items: center;
     gap: 10px;
+    margin-top: 20px;
+  }
+
+  #enter, #clear {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  /* DPI selector floats on mobile too */
+  .fix-dpi {
+    top: 10%;
+    right: 5%;
+    transform: none;  /* simpler on small screens */
+    padding: 8px;
+    font-size: 14px;
   }
 }
+
