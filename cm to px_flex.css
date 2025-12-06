@@ -128,18 +128,10 @@ box-shadow:0px 2px 2px #023020;
   font-weight: bold;
  }
   
-#enter{
- align-self: flex-start;
-  margin-left: 295px;
-  margin-top: -20px;
-}
-
-#clear{
- align-self: flex-start;
-  margin-left: 590px;
-  margin-top: 20px;
-  margin-bottom: 200px;
-}
+#enter, #clear {
+    margin-left: 0;
+    margin-top: 0;
+  }
 
 #info{
 text-align:justify;
