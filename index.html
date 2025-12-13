@@ -33,7 +33,7 @@
 	<label for="myinput2">
 <input id="myinput2" type="radio" name="type" value="2" />2.PX to CM</label>
 </div>
-	
+
 <div class="dpi-flex">
 <p id="dpi">Choose the DPI:
 <a id="link" href="#dpi*">*</a>
@@ -59,17 +59,21 @@
 </div>
 </div>
 
-<p id="textnum">Type your number:<input id="num" type="number" min="0.0" max="1000000.0" step="0.01" /></p>
+<p id="textnum">
+    Type your number:
+    <input id="num" type="number" min="0.0" max="1000000.0" step="0.01" />
+</p>
 
- <div class="main-section">
-    <button id="enter" type="button" py-click="enter">Enter</button>
+<button id="enter" type="button" py-click="enter" class="enter-btn" >Enter</button>
+
+<div class="main-section">
     <h4 id="textr">Result:</h4>
     <div id="box"><output id="result"></output></div>
     <button id="clear" type="button" py-click="clear">Refresh</button>
- </div>
+</div>
+</form>	
 
-</form>
-
+<br><br><br>
 <hr>
 
 <a name="dpi*"></a>
@@ -118,3 +122,4 @@ It measures the resolution or density of printed dots or pixels on a display or 
 
 </body>
 </html>
+
