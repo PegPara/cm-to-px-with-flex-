@@ -27,7 +27,7 @@
 <h1>CM TO PX</h1>
 <h4>Select your choise:</h4>	
 <hr>
-<form>
+
 <div class="row-flex">
 <div class="ty">
 	<label for="myinput1">
@@ -62,19 +62,24 @@
 </div>
 </div>
 
-<p id="textnum">
-    Type your number:
-    <input id="num" type="number" min="0.0" max="1000000.0" step="0.01" />
-</p>
+<div class="input-area">
+  <label id="textnum">
+    <span class="label-text">Type your number:</span>
 
-<button id="enter" type="button" py-click="enter" class="enter-btn" >Enter</button>
+    <span class="input-column">
+      <input id="num" type="number" min="0.0" max="1000000.0" step="0.01" />
+      <button id="enter" type="button" py-click="enter">Enter</button>
+    </span>
+  </label>
+</div>
+
 
 <div class="main-section">
     <h4 id="textr">Result:</h4>
     <div id="box"><output id="result"></output></div>
     <button id="clear" type="button" py-click="clear">Refresh</button>
 </div>
-</form>	
+
 
 <br><br><br>
 <hr>
@@ -125,4 +130,3 @@ It measures the resolution or density of printed dots or pixels on a display or 
 
 </body>
 </html>
-
